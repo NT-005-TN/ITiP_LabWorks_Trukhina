@@ -1,3 +1,5 @@
+package Laba1;
+
 public class Palindrome {
 
     public static boolean isPalindrome(String line){
@@ -8,7 +10,7 @@ public class Palindrome {
     public static String reverseString(String s){
         String newString = "";
         for(int i = s.length()-1; i >= 0; i--){
-            newString += s.charAt(i);
+            newString = s.charAt(i) + newString;
         }
         return newString;
     }
