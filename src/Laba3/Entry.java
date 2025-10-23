@@ -1,11 +1,23 @@
 package Laba3;
 
-class Entry<K, V> {
-    K key;
-    V value;
+public class Entry<K, V> {
+    K key;                          // Ключ пары
+    V value;                        // Значение пары
 
-    Entry(K key, V value) {
-        this.key = key;
-        this.value = value;
+    public Entry(K key, V value) {  // Конструктор записи
+        this.key = key;             // Сохраняем ключ
+        this.value = value;         // Сохраняем значение
+    }
+
+    public K getKey() {             // Геттер для ключа
+        return key;                 // Возвращаем ключ
+    }
+
+    public V getValue() {           // Геттер для значения
+        return value;               // Возвращаем значение
+    }
+
+    public void setValue(V value) { // Сеттер для значения
+        this.value = value;         // Обновляем значение
     }
 }
