@@ -7,6 +7,12 @@ public class HashTable<K, V> {
     private int size;                         // Количество элементов
     private static final int INITIAL_CAPACITY = 16; // Начальный размер
 
+    /*
+    Аннотация @SuppressWarnings("unchecked") в данном случае
+    используется для подавления предупреждения компилятора о небезопасном приведении типов (unchecked cast),
+    которое возникает при создании массива обобщённого (generic) типа
+     */
+
     @SuppressWarnings("unchecked")
     public HashTable() {                      // Конструктор
         table = new LinkedList[INITIAL_CAPACITY]; // Создаём массив

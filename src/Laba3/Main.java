@@ -31,7 +31,7 @@ public class Main {
         System.out.println("5. Обновили 'apple' на 10 → get('apple') = " + ht.get("apple"));
 
         // remove()
-        Integer removed = ht.remove("banana");
+        int removed = ht.remove("banana");
         System.out.println("6. remove('banana') → " + removed);         // 3
         System.out.println("   get('banana') после удаления → " + ht.get("banana")); // null
         System.out.println("   size() после удаления → " + ht.size());  // 2
