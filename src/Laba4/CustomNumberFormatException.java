@@ -12,6 +12,8 @@ package Laba4;
 
 public class CustomNumberFormatException extends Exception {
 
+    public CustomNumberFormatException(){}
+
     public CustomNumberFormatException(String invalidInput, Throwable cause) {
         super("Невозможно преобразовать строку '" + invalidInput + "' в целое число.", cause);
     }
