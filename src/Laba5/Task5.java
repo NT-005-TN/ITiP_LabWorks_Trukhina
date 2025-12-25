@@ -17,7 +17,7 @@ public class Task5 {
         };
 
         String x = "W";
-        Pattern pattern = Pattern.compile("\\b(?i)" + x + "[A-Za-z]*");
+        Pattern pattern = Pattern.compile("(?i)" + x + "[A-Za-z]*");
         //?i игнорируем регистр
 
         for(String text: testIPs) {

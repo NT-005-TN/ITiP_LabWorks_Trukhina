@@ -19,7 +19,6 @@ public class MatrixMaxFinder {
 
         Random random = new Random();
 
-        // Заполняем матрицу случайными числами
         System.out.println("Матрица:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
@@ -29,7 +28,6 @@ public class MatrixMaxFinder {
             System.out.println();
         }
 
-        // Создаем массив потоков (по одному на строку)
         Thread[] threads = new Thread[rows];
 
         for (int i = 0; i < rows; i++) {
@@ -38,12 +36,10 @@ public class MatrixMaxFinder {
             threads[i].start();
         }
 
-        // Ждем завершения всех потоков
         for (Thread thread : threads) {
             thread.join();
         }
 
-        // Находим глобальный максимум в главном потоке
         for (int i = 0; i < rows; i++) {
             if (maxInRow[i] > globalMax) {
                 globalMax = maxInRow[i];
@@ -58,7 +54,6 @@ public class MatrixMaxFinder {
         System.out.println("\nГлобальный максимум (многопоточный): " + globalMax);
     }
 
-    // Класс для обработки одной строки матрицы
     class RowProcessor implements Runnable {
         private int rowIndex;
 
